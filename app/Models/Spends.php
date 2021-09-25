@@ -24,5 +24,6 @@ class Spends extends Model
     protected $attributes = [
         'name' => false,
         'price' => false,
+        'user_id' => false
     ];
 }

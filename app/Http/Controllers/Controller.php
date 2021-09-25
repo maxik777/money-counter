@@ -10,6 +10,7 @@ use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller as BaseController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Redirect;
 use Inertia\Inertia;
@@ -20,7 +21,13 @@ class Controller extends BaseController
 
     public function index()
     {
-        $spends = DB::table('spends')->get()->sum('price');
+        $user = Auth::user();
+        $spends = DB::table('spends')
+            ->whereMonth('created_at', date('m'))
+            ->whereYear('created_at', date('Y'))
+            ->where('user_id', $user->id)
+            ->get()
+            ->sum('price');
 
         return Inertia::render('Dashboard',
         [
@@ -30,9 +37,11 @@ class Controller extends BaseController
 
     public function saveSpends(Request $request)
     {
+        $user = Auth::user();
         $name = $request->input('name');
         $price = $request->input('price');
         $spends = new Spends();
+        $spends->user_id = $user->id;
         $spends->name = $name;
         $spends->price = $price;
 
