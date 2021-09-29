@@ -34,6 +34,8 @@ export default function Reports(props){
                                                     <tr className="bg-gray-400">
                                                         <th className="border text-center p-3 w-1/2">Name</th>
                                                         <th className="border text-center p-3 w-1/2">Price</th>
+                                                        <th className="border text-center p-3 w-1/2">Created</th>
+                                                        <th className="border text-center p-3 w-1/2">Updated</th>
                                                         <th className="border text-center p-3 w-px">Actions</th>
                                                     </tr>
                                                     </thead>
@@ -42,6 +44,8 @@ export default function Reports(props){
                                                         <tr key={d.id}>
                                                             <td className="border text-center p-3">{d.name}</td>
                                                             <td className="border text-center p-3">{d.price}</td>
+                                                            <td className="border text-xs text-center p-3">{d.created_at}</td>
+                                                            <td className="border text-xs text-center p-3">{d.updated_at}</td>
                                                             <td className="border text-center  p-3">
                                                                 <div className="flex flex-row justify-between">
                                                                     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">

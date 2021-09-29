@@ -5669,6 +5669,12 @@ function Reports(props) {
                             className: "border text-center p-3 w-1/2",
                             children: "Price"
                           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("th", {
+                            className: "border text-center p-3 w-1/2",
+                            children: "Created"
+                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("th", {
+                            className: "border text-center p-3 w-1/2",
+                            children: "Updated"
+                          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("th", {
                             className: "border text-center p-3 w-px",
                             children: "Actions"
                           })]
@@ -5682,6 +5688,12 @@ function Reports(props) {
                             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("td", {
                               className: "border text-center p-3",
                               children: d.price
+                            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("td", {
+                              className: "border text-xs text-center p-3",
+                              children: d.created_at
+                            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("td", {
+                              className: "border text-xs text-center p-3",
+                              children: d.updated_at
                             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("td", {
                               className: "border text-center  p-3",
                               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)("div", {
