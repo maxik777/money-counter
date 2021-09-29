@@ -29,7 +29,7 @@ export default function Reports(props){
                                     <div className="text-center"><strong>Items for current month:</strong></div>
                                     <div>
                                             <div>
-                                                <table className="w-full">
+                                                <table className="w-full block overflow-x-auto whitespace-nowrap">
                                                     <thead>
                                                     <tr className="bg-gray-400">
                                                         <th className="border text-center p-3 w-1/2">Name</th>
